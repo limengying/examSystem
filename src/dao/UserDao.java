@@ -25,7 +25,7 @@ public class UserDao {
 	 *         通过工号查找到user对象并返回
 	 */
 	public User getUsersByUserId(int userId) {
-		String sql = "";
+		String sql = "select * from userinfo where userId=?";
 		try {
 			conn = util.openConnection();
 			preparedStatement = conn.prepareStatement(sql);
@@ -33,19 +33,19 @@ public class UserDao {
 			rs = preparedStatement.executeQuery();
 			if (rs.next()) {
 				userId = rs.getInt("userId");// '登录编号',
-				String password = rs.getString("userId");// '用户登录密码',
-				String name = rs.getString("userId");// '用户姓名',
-				boolean sex = rs.getBoolean("userId");// '用户性别',1代表男生0表示女生
-				String department = rs.getString("userId");// '用户部门',
-				Timestamp timestamp = rs.getTimestamp("userId");// '用户出生日期',
+				String password = rs.getString("password");// '用户登录密码',
+				String name = rs.getString("name");// '用户姓名',
+				boolean sex = rs.getBoolean("sex");// '用户性别',1代表男生0表示女生
+				String department = rs.getString("department");// '用户部门',
+				Timestamp timestamp = rs.getTimestamp("birthdate");// '用户出生日期',
 				Date birthdate = null;
 				if (timestamp != null) {
 					birthdate = new Date(timestamp.getTime());
 				}
-				String telephone = rs.getString("userId");// '用户电话',
-				String email = rs.getString("userId");// '用户邮箱',
-				String address = rs.getString("userId");// '用户地址',
-				boolean permission = rs.getBoolean("userId");// '用户是否有权限更新题库',
+				String telephone = rs.getString("telephone");// '用户电话',
+				String email = rs.getString("email");// '用户邮箱',
+				String address = rs.getString("address");// '用户地址',
+				boolean permission = rs.getBoolean("permission");// '用户是否有权限更新题库',
 
 				user = new User(userId, password, name, sex, department, birthdate, telephone, email, address,
 						permission);
