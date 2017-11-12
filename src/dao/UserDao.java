@@ -24,7 +24,7 @@ public class UserDao {
 	 * 
 	 *         通过工号查找到user对象并返回
 	 */
-	public User getUsersByUserId(int userId) {
+	public User getUserByUserId(int userId) {
 		String sql = "select * from userinfo where userId=?";
 		try {
 			conn = util.openConnection();

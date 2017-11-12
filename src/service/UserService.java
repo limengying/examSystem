@@ -19,7 +19,7 @@ public class UserService {
 	 * 
 	 */
 	public User login(int userId, String password) {
-		user = userDao.getUsersByUserId(userId);
+		user = userDao.getUserByUserId(userId);
 		if (user != null) {
 			if (password.equals(user.getPassword())) {
 				System.out.println("登录成功");
