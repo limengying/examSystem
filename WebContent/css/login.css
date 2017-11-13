@@ -10,6 +10,39 @@ html {
 	direction: ltr
 }
 
+.input-section {
+	text-align:center;
+	width: 960px;
+	border-right: 0px solid #ededed;
+	padding-left: 25%;
+	margin-right: -1px;
+	position: relative
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group:after, .form-group:before {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden
+}
+
+.form-group .control-group {
+	float: left
+}
+
+.form-group .btn-group {
+	width: 260px;
+	margin-bottom: 20px
+}
+.pop-content .about-pwd {
+	margin: 0 0 10px 110px
+}
+
 article, aside, blockquote, body, button, code, dd, details, dl, dt,
 	fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
 	header, hr, input, legend, li, menu, nav, ol, p, pre, section, td,
@@ -5302,26 +5335,7 @@ input[readonly], textarea[readonly] {
 	cursor: default
 }
 
-.form-group {
-	margin-bottom: 20px
-}
 
-.form-group:after, .form-group:before {
-	clear: both;
-	content: ".";
-	display: block;
-	height: 0;
-	visibility: hidden
-}
-
-.form-group .control-group {
-	float: left
-}
-
-.form-group .btn-group {
-	width: 260px;
-	margin-bottom: 20px
-}
 
 .control-label {
 	padding: 0 15px;
@@ -7702,14 +7716,7 @@ input.input-time {
 	border-radius: 0
 }
 
-.input-section {
-	text-align:center;
-	width: 960px;
-	border-right: 1px solid #ededed;
-	padding-left: 20%;
-	margin-right: -1px;
-	position: relative
-}
+
 
 .txt-error-tip {
 	line-height: 14px;
@@ -8577,12 +8584,9 @@ input.input-time {
 	color: #00bd9c
 }
 
-.pop-content .about-pwd {
-	margin: 0 0 10px 110px
-}
 
 .keep-pwd {
-	margin-left: 105px;
+	margin-left: 13%;
 	float: left
 }
 
@@ -10719,10 +10723,19 @@ pre.prettyprint {
 }
 
 .wrapper {
+	 position: absolute;
+	 top: 50%;
+     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 	border: 1px solid #d6d6d6;
 	border-radius: 4px;
 	background: #fff;
 	overflow: hidden
+	
 }
 
 .tabbed li {
