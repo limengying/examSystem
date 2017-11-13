@@ -1,60 +1,34 @@
-/**
- * Created by Administrator on 2017/7/4.
- */
-$(function() {
-	$('body').css({
-		'min-height' : $(window).height()
-	});
+function login() {
+	var loginId = document.getElementById('idIpt').value;
+	var password = document.getElementById('passwordIpt').value;
 
-	// 点击登录
-	$(".submitBtn")
-			.click(
-					function() {
-						var phoneNumber = $("#phoneNumber").val();
-						var verificationCode = $("#verificationCode").val();
-						if (phoneNumber == "") {
-							alert("请输入用户或者考生工号！");
-							return false;
-						}
-						if (verificationCode == "") {
-							alert("验证码不能为空!");
-							return false;
-						}
-						// 请求后台服务
-						var data = {
-							phoneNumber : phoneNumber,
-							verificationCode : verificationCode
-						};
-						// alert(JSON.stringify(data));
-						$
-								.post(
-										LOGIN_API,
-										data,
-										function(result) {
-											// alert(typeof result + " ,返回的内容为
-											// "+ result);
-											if (result != null) {
-												var jsonReturn = JSON
-														.parse(result);// 将JSON字符串转换为对象
-												// 判断 result 的返回值 ,isFirst
-												// 为后台添加的属性,如果是第一次登陆则至hobbyChoose.html
-												if (jsonReturn.result == 'isFirst') {
-													window.location.href = "./page/hobbyChoose.html?userid="
-															+ jsonReturn.userid;
-													// window.open('./test.html');
-												} else if (jsonReturn.result == '0') {
-													window.location.href = "./main.html?userid="
-															+ jsonReturn.userid;
-												} else if (jsonReturn.result == '-1') {
-													alert("工号为："
-															+ phoneNumber
-															+ "的用户或者考生不存在");
-												} else if (jsonReturn.result == '-2') {
-													alert("密码错误");
-												}
-											} else {
-												alert("数据库有误");
-											}
-										}, "json");
-					});
-});
+	var radioCheck = document.getElementsByName("loginChk");
+	var optType = "";
+	for (var i = 0; i < radioCheck.length; i++) {
+		if (radioCheck[i].checked == true) {
+			optType = radioCheck[i].value;
+			break;
+		}
+	}
+	if (loginId == "") {
+		alert("请输入工号");
+		return false;
+	}
+
+	if (password == "") {
+		alert("密码不能为空");
+		return false;
+	}
+	if (optType == "") {
+		alert("请选择用户登录或者考生登录");
+		return false;
+	}
+	// 请求后台服务
+	var data = {
+		loginId : loginId,
+		optType : optType,
+		password : password
+	};
+	alert(JSON.stringify(data));
+	jump(LOGIN_API, data);// 提交给后台，此时前端需要因为common文件夹下的common.js和api.js
+}

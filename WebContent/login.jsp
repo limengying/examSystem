@@ -5,6 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>XX文化考试系统</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login.css">
+<script src="<%=request.getContextPath()%>/js/common/api.js"></script>
+<script src="<%=request.getContextPath()%>/js/common/common.js"></script>
+<script src="<%=request.getContextPath()%>/js/login/login.js"></script>
 </head>
 <body>
 	<div class="nk-container    ">
@@ -12,7 +15,7 @@
 			<div class="header-main clearfix">
 				
 				<ul class="nowcoder-navbar">
-					<li><a href="/">XX文化考试系统</a></li>
+					<li><a href="">XX文化考试系统</a></li>
 					
 				</ul>		
 			</div>
@@ -31,7 +34,7 @@
 							<div class="form-group">
 								<label for="emailIpt" class="control-label">工号</label>
 								<div class="control-group">
-									<input type="text" id="emailIpt" placeholder="请输入用户/考生工号">
+									<input type="text" id="idIpt" placeholder="请输入用户/考生工号">
 								</div>
 							</div>
 							<div class="form-group">
@@ -42,12 +45,12 @@
 							</div>
 							<div class="form-group about-pwd">
 								<div class="keep-pwd">
-									<label> <input type="radio" id="userLoginChk" >
+									<label> <input type="radio" id="userLoginChk" name="loginChk" value="userLogin">
 										用户
 									</label>
 								</div>
 								<div class="keep-pwd">
-									<label> <input type="radio" id="examineeLoginChk" >
+									<label> <input type="radio" id="examineeLoginChk" name="loginChk" value="examineeLogin">
 										考生
 									</label>
 								</div>
@@ -55,8 +58,8 @@
 							</div>
 							<div class="form-group">
 								<div class="col-input-login">
-									<a class="btn btn-primary btn-block" href="javascript:void(0);"
-										id="loginBtn">立即登录</a> <input type="submit"
+									<a class="btn btn-primary btn-block"  onclick="javascript:login();"
+										id="loginBtn">立即登录</a> <input type="submit" 
 										class="nk-invisible" />
 								</div>
 							</div>
@@ -92,56 +95,13 @@
 
 	</div>
 	<script>
+		
 		window.isLogin = false;
 		window.globalInfo = {
 			canLoadInIframe : 'false'
 		};
 		window.useNeteaseCaptcha = true;
 	</script>
-	<script type="text/javascript">
-		window.ncDeployImageRoot = "//static.nowcoder.com/";
-		window.ncJsVersion = "1.02.08";
-		window.ncJsPluginVersion = "1.0.10";
-	</script>
-	<script src="//static.nowcoder.com/nc/js/1.02.08/sea.js"
-		type="text/javascript"></script>
-	<script src="//static.nowcoder.com/nc/js/1.02.08/nc.cpn.js"
-		type="text/javascript"></script>
-	<%-- 
-	<script
-		src="<%=request.getContextPath()%>/js/login/error.js"
-		type="text/javascript"></script>   --%>	
-		
-	<script type="text/javascript">
-		if (!window.seajs) {
-			var oBody = document.body;
-			var aChild = oBody.childNodes;
-			var oDv = document.createElement('div');
-			oDv.innerHTML = [
-					'<div style="text-align:center;">',
-					'<div style="font-size:18px;margin:20px 0;font-weight: bold;">',
-					'静态文件加载出错，请检查当前网络情况是否正常，或者按照下面步骤修改电脑的DNS',
-					'<br />推荐使用以下DNS: 223.5.5.5(首选) 和 223.6.6.6(备用)',
-					'</div>',
-					'<img style="border:1px solid #ccc;" src="//ww2.sinaimg.cn/mw690/44b25cb0jw1f5vt92tsz1j20o03d97dt.jpg" />',
-					'</div>' ].join('');
-			aChild.length === 0 && oBody.appendChild(oDv);
-			aChild.length > 0 && oBody.insertBefore(oDv, aChild[0]);
-		}
-		seajs.use('nowcoder/1.2.896/javascripts/site/common/index');
-		seajs.use('nowcoder/1.2.896/javascripts/site/common/nav');
-	</script>
-	<script>
-		var _hmt = _hmt || [];
-		(function() {
-			var hm = document.createElement("script");
-			hm.src = "//hm.baidu.com/hm.js?a808a1326b6c06c437de769d1b85b870";
-			var s = document.getElementsByTagName("script")[0];
-			s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
-	<script type="text/javascript">
-		seajs.use('nowcoder/1.2.896/javascripts/site/login/login');
-	</script>
+	
 </body>
 </html>
