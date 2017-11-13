@@ -1,35 +1,34 @@
-$(function() {
-	$('body').css({
-		'min-height' : $(window).height()
-	});
+function login() {
+	var loginId = document.getElementById('idIpt').value;
+	var password = document.getElementById('passwordIpt').value;
 
-	// 点击登录
-	$(".submitBtn").click(function() {
-		var loginId = $("#phoneNumber").val();
-		var optType = $("#optType").val();
-		var password = $("#passwordIpt").val();
-
-		if (loginId == "") {
-			alert("请输入工号");
-			return false;
+	var radioCheck = document.getElementsByName("loginChk");
+	var optType = "";
+	for (var i = 0; i < radioCheck.length; i++) {
+		if (radioCheck[i].checked == true) {
+			optType = radioCheck[i].value;
+			break;
 		}
+	}
+	if (loginId == "") {
+		alert("请输入工号");
+		return false;
+	}
 
-		if (optType == "") {
-			alert("登录方式不能为空");
-			return false;
-		}
-
-		if (password == "") {
-			alert("密码不能为空");
-			return false;
-		}
-		// 请求后台服务
-		var data = {
-				loginId : loginId,
-				optType : optType,
-				password : password
-		};
-		alert(JSON.stringify(data));
-		jump(LOGIN_API, data);//提交给后台，此时前端需要因为common文件夹下的common.js和api.js
-	});
-});
+	if (password == "") {
+		alert("密码不能为空");
+		return false;
+	}
+	if (optType == "") {
+		alert("请选择用户登录或者考生登录");
+		return false;
+	}
+	// 请求后台服务
+	var data = {
+		loginId : loginId,
+		optType : optType,
+		password : password
+	};
+	alert(JSON.stringify(data));
+	jump(LOGIN_API, data);// 提交给后台，此时前端需要因为common文件夹下的common.js和api.js
+}

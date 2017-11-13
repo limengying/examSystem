@@ -133,8 +133,7 @@ public class LoginServlet extends HttpServlet {
 		}
 
 		if ("0".equals(map.get("result"))) {// 登录成功
-			writer.println("<script language='javascript'>alert('缺少参数');</script>");
-			// writer.println("<script>window.location.href='./views/part1/zhukongyemian.jsp'</script>");
+			writer.println("<script>window.location.href='./Test.jsp'</script>");
 		} else if ("-1".equals(map.get("result"))) {// 缺少参数
 			writer.println("<script language='javascript'>alert('缺少参数');window.location.href=''/script>");
 		} else if ("-3".equals(map.get("result"))) {// 登录失败，密码错误
