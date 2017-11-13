@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,12 +42,12 @@
 							</div>
 							<div class="form-group about-pwd">
 								<div class="keep-pwd">
-									<label> <input type="checkbox" id="userLoginChk" checked>
+									<label> <input type="radio" id="userLoginChk" >
 										用户
 									</label>
 								</div>
 								<div class="keep-pwd">
-									<label> <input type="checkbox" id="examineeLoginChk" checked>
+									<label> <input type="radio" id="examineeLoginChk" >
 										考生
 									</label>
 								</div>
@@ -108,9 +107,11 @@
 		type="text/javascript"></script>
 	<script src="//static.nowcoder.com/nc/js/1.02.08/nc.cpn.js"
 		type="text/javascript"></script>
+	<%-- 
 	<script
-		src="//static.nowcoder.com/nowcoder/1.2.896/javascripts/base.js"
-		type="text/javascript"></script>
+		src="<%=request.getContextPath()%>/js/login/error.js"
+		type="text/javascript"></script>   --%>	
+		
 	<script type="text/javascript">
 		if (!window.seajs) {
 			var oBody = document.body;

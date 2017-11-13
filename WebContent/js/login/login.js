@@ -13,7 +13,7 @@ $(function() {
 						var phoneNumber = $("#phoneNumber").val();
 						var verificationCode = $("#verificationCode").val();
 						if (phoneNumber == "") {
-							alert("请输入手机号码");
+							alert("请输入用户或者考生工号！");
 							return false;
 						}
 						if (verificationCode == "") {
@@ -46,9 +46,9 @@ $(function() {
 													window.location.href = "./main.html?userid="
 															+ jsonReturn.userid;
 												} else if (jsonReturn.result == '-1') {
-													alert("手机号码为："
+													alert("工号为："
 															+ phoneNumber
-															+ "的用户不存在");
+															+ "的用户或者考生不存在");
 												} else if (jsonReturn.result == '-2') {
 													alert("密码错误");
 												}
