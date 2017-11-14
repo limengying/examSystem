@@ -39,6 +39,7 @@ public class MultiChoiceDao {
 			preparedStatement.setInt(2, num);
 			rs = preparedStatement.executeQuery();
 			while (rs.next()) {
+				
 				int multiChoiceId = rs.getInt("multiChoiceId");// '多选题编号',
 				int score = rs.getInt("score");// '分值',
 				String content = rs.getString("content");// '题目内容描述',
@@ -55,6 +56,7 @@ public class MultiChoiceDao {
 				int userId = rs.getInt("userId");// '操作人编号',
 				multiChoice = new MultiChoice(multiChoiceId, score, type, content, option1, option2, option3,
 						option4, answer, importTime, userId);
+				
 				multiChoices.add(multiChoice);
 			}
 		} catch (SQLException e) {
@@ -76,6 +78,7 @@ public class MultiChoiceDao {
 			}
 
 		}
+	
 		return multiChoices;
 	}
 }

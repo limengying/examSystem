@@ -43,14 +43,13 @@ public class PaperDao {
 			Date currentDateTime = new Date();
 			String buildTime = df.format(currentDateTime);
 			preparedStatement.setString(9,buildTime);		
-			System.out.println(sql);
+			//System.out.println(sql);
 			
 			int i = preparedStatement.executeUpdate();
 			if (i == 1) {
-				System.out.println(sql);
+				//System.out.println(sql);
 				System.out.println("插入试卷成功！");
 				paperId = getPaperByTime(examineeId,type,buildTime);
-				System.out.println(paperId);
 				return paperId;
 				
 			} else{

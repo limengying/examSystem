@@ -21,12 +21,12 @@ public class PaperService {
 	List<MultiChoice> multiChoices = null;
 	List<Judge> judges = null;
 
-	String singleChoice = null;
-	String multiChoice = null;
-	String judge = null;
-	String singleAnswer = null;
-	String multiAnswer = null;
-	String judgeAnswer = null;
+	String singleChoice = "";
+	String multiChoice = "";
+	String judge = "";
+	String singleAnswer = "";
+	String multiAnswer = "";
+	String judgeAnswer = "";
 
 	public List<SingleChoice> getSingleChoices() {
 		return singleChoices;
@@ -64,6 +64,7 @@ public class PaperService {
 		multiChoices = multiDao.getMultiChoicesInRandom(type, 1);
 		judges = judgeDao.getJudgesInRandom(type, 1);
 		if (singleChoices != null && multiChoices != null && judges != null) {
+		
 			System.out.println("试卷产生成功！");
 			return true;
 		} else {
@@ -114,9 +115,7 @@ public class PaperService {
 
 		}
 
-		System.out.println(singleChoices);
-		System.out.println(multiChoice);
-		System.out.println(judge);
+	
 	     paperId = paperDao.addPaper(type, examineeId, singleChoice, multiChoice, judge, singleAnswer, multiAnswer,
 				judgeAnswer);
 		if (paperId != -1) {

@@ -75,7 +75,7 @@ public class PaperServlet extends HttpServlet {
 				judges = paperService.getJudges();
 				
 				if (session.getAttribute("examinee") == null) {
-					map.put("reslut", "-1");
+					map.put("result", "-1");
 				} 
 				else{
 				    examinee = (Examinee) session.getAttribute("examinee");
@@ -87,22 +87,27 @@ public class PaperServlet extends HttpServlet {
 					session.setAttribute("singleChoices", singleChoices);
 					session.setAttribute("multiChoices", multiChoices);
 					session.setAttribute("judges",judges);
-					map.put("reslut", "0");
+					map.put("result", "0");
+					
+				}
+				else{
+					
 				}
 				
 			}
 	
 			System.out.println("map..." + map);
 		} else {
-			map.put("reslut", "-2");
+			map.put("result", "-2");
+		
 		}
 
 	 
-		System.out.println("map..." + map);
+		
 		// 根据result值，判断页面如何跳转
 		if ("0".equals(map.get("result"))) {// 试卷生成成功，跳转考试页面
 			System.out.println("页面操作正确");
-			writer.println("<script language='javascript'>alert('saaaaaaaaaaa');window.location.href='./paper.jsp'</script>");
+			writer.println("<script language='javascript'>window.location.href='./paper.jsp'</script>");
 
 		} else if ("-1".equals(map.get("result"))) {// session不存在考生
 			writer.println(

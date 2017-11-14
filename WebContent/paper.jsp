@@ -1,69 +1,29 @@
-
-<!DOCTYPE html>
-
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>&#19979;&#38754;&#26377;&#20851;JVM&#20869;&#23384;&#65292;&#35828;&#27861;&#38169;&#35823;&#30340;&#26159;&#65311;_Java&#24037;&#31243;&#24072;&#33021;&#21147;&#35780;&#20272;_牛客网</title>
-<meta name="description"
-	content="&#19979;&#38754;&#26377;&#20851;JVM&#20869;&#23384;&#65292;&#35828;&#27861;&#38169;&#35823;&#30340;&#26159;&#65311;,Java&#24037;&#31243;&#24072;&#33021;&#21147;&#35780;&#20272;,牛客网是IT求职神器,提供海量IT笔试题库,全面提升编程能力">
-<meta name="keywords" content="Java工程师能力评估,IT笔试,牛客网">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>XX文化考试系统-考试</title>
+
 <link rel="stylesheet"
-	href="//static.nowcoder.com/nowcoder/1.2.896/stylesheets/styles/subject/exercise.css" />
+	href="<%=request.getContextPath()%>/css/paper.css">
+
+<script src="<%=request.getContextPath()%>/js/common/api.js"></script>
+<script src="<%=request.getContextPath()%>/js/common/common.js"></script>
+<script src="<%=request.getContextPath()%>/js/login/paper.js"></script>
 </head>
 <body>
 	<div class="nk-container ">
 		<div class="nowcoder-header">
 			<div class="header-main clearfix">
-				<a class="nowcoder-logo" href="/" title="牛客网"></a>
+
 				<ul class="nowcoder-navbar">
-					<li><a href="/">首页</a></li>
-					<li><a href="/contestRoom">题库</a>
-						<ul class="sub-nav">
-							<li><a href="/contestRoom">公司真题</a></li>
-							<li><a href="/intelligentTest">专项练习</a></li>
-							<li><a href="/activity/oj">在线编程</a></li>
-							<li><a href="/kaoyan">考研真题</a></li>
-							<li><a href="/finalexam">期末考题</a></li>
-							<li><a href="/activity/topics">精华专题</a></li>
-							<li><a href="/questionCenter">试题广场</a></li>
-						</ul></li>
-					<li><a href="/courses">课程</a></li>
-					<li><span class="ico-nav-new"></span> <a href="/recommend">求职</a>
-					</li>
-					<li><a href="/discuss">讨论区</a></li>
-					<li><a href="/acm/contest/vip-contest-index">发现</a>
-						<ul class="sub-nav">
-							<li><a href="/acm/contest/vip-contest-index">竞赛</a></li>
-							<li><a href="/ranking">排行榜</a></li>
-						</ul></li>
-				</ul>
-				<div class="nav-account">
-					<a href="/login" class="nav-account-login" id="nav-login">登录</a>/ <a
-						href="/register" class="nav-account-reg" data-permalink="">注册</a>
-				</div>
-				<ul class="nowcoder-navbar nowcoder-other-nav">
-					<li class="nav-search"><a href="javascript:void(0);"
-						class="icon-search js-search-btn">搜索</a>
-						<div class="newnav-search-wrap">
-							<div class="newnav-search-cont">
-								<form method="get" action="/search">
-									<input class="nav-search-txt" name="query" type="text">
-									<input type="hidden" name="type" value="all" /> <input
-										type="submit" class="nk-invisible" /> <a
-										href="javascript:void(0);"
-										class="icon-search-colse js-close-search-btn"></a>
-								</form>
-							</div>
-						</div</li>
-					<li><a href="/app" class="icon-mobile-phone">APP</a></li>
-					<li><a href="http://hr.nowcoder.com" class="icon-briefcase"
-						target="_blank">企业版</a></li>
+					<li><a href="">XX文化考试系统</a></li>
+
 				</ul>
 			</div>
+
 		</div>
 		<div class="nk-main clearfix">
 			<div class="module-box subject-box">
@@ -117,8 +77,7 @@
 						</div>
 						<div class="subject-action clearfix">
 							<div class="subject-opr">
-								<span class="subject-opr-item"><i class="ico-collect"></i><a
-									href="javascript:void(0);" class="js-follow" data-id="14817">收藏本题</a></span>
+								
 							</div>
 							<div class="subject-next">
 								<form id="submitForm" method="post"
@@ -160,13 +119,7 @@
 							<li><a href="javascript:void(0);" data-qid="16021">20</a></li>
 						</ul>
 					</div>
-					<script>
-						window.isLogin = false;
-						window.globalInfo = {
-							canLoadInIframe : 'false'
-						};
-						window.useNeteaseCaptcha = true;
-					</script>
+					
 					<script type="text/javascript">
 						window.ncDeployImageRoot = "//static.nowcoder.com/";
 						window.ncJsVersion = "1.02.08";
@@ -221,60 +174,11 @@
 				<input type="hidden" id="jsQuestionInfo" data-pid="2238"
 					data-tid="12378598" data-qid="14817" data-total="20" data-left="20" />
 			</div>
-			<div class="fixed-menu">
-				<ul>
-					<li><a href="javascript:void(0);" class="gotop js-nav-go-top"
-						title="回到顶部"></a></li>
-					<li><a class="fixed-wb" target="_blank"
-						href="http://www.weibo.com/nowcoder"></a></li>
-					<li><a
-						href="tencent://groupwpa/?subcmd=all&param=7B2267726F757055696E223A3135373539343730352C2274696D655374616D70223A313431333130373737387D0A"
-						class="qq" title="QQ"></a></li>
-					<li><a href="javascript:void(0);" class="wx"></a>
-						<div class="wx-qrcode">
-							<img src="//static.nowcoder.com/images/wx-rcode.jpg" alt="二维码" />
-							<p>扫描二维码，关注牛客网</p>
-						</div></li>
-					<li><a href="/discuss/30" class="feedback" title="意见反馈"></a> <a
-						href="/discuss/30" class="feedback-letter">意见反馈</a></li>
-					<li><a href="javascript:void(0);" class="qrcode"></a>
-						<div class="wx-qrcode">
-							<img src="//uploadfiles.nowcoder.com/app/android/app.png"
-								alt="二维码" />
-							<p>下载牛客APP，随时随地刷题</p>
-						</div></li>
-				</ul>
-				<div class="phone-qrcode" style="display: none;">
-					<a href="javascript:void(0);" class="qrcode-close">x</a> <img
-						src="//uploadfiles.nowcoder.com/app/android/app.png" alt="二维码"
-						style="width: 70px; height: 70px;" />
-					<p>扫一扫下载牛客APP</p>
-				</div>
-			</div>
-			<div class="fixed-foot clearfix js-fixed-foot" style="display: none;">
-				<div class="fixed-foot-main">
-					<div class="fixed-foot-tip">刷真题、补算法、看面经、得内推</div>
-					<div class="fixed-foot-login">
-						<span>使用第三方账号直接登录使用吧：</span> <a href="javascript:void(0);"
-							data-href="https://api.weibo.com/oauth2/authorize?client_id=3023520088&redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fsinaconfig&response_type=code&state=web&scope=follow_app_official_microblog"
-							class="ft-login-item ft-login-wb nc-js-action-oauth" title="登录微博"></a>
-						<a href="javascript:void(0);"
-							data-href="https://graph.qq.com/oauth2.0/authorize?client_id=101003590&redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fqqconfig&response_type=code&state=web"
-							class="ft-login-item ft-login-qz nc-js-action-oauth"
-							title="登录Qzone"></a> <a href="javascript:void(0);"
-							data-href="https://open.weixin.qq.com/connect/qrconnect?appid=wxfee0340998de6ab1&redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Flogin%2Fweixin&response_type=code&scope=snsapi_login&state=11"
-							class="ft-login-item ft-login-wx nc-js-action-oauth" title="登录微信"></a>
-						<a href="javascript:void(0);"
-							data-href="https://github.com/login/oauth/authorize?client_id=1c539827b9400016d0c9&scope=user:email&redirect_uri=http%3A%2F%2Fwww.nowcoder.com%2Foauth2%2Fgitconfig&response_type=code&state=web"
-							class="ft-login-item ft-login-git nc-js-action-oauth"
-							title="登录git"></a> <a href="javascript:void(0);"
-							class="more-login nc-req-auth">更多</a>
-					</div>
-				</div>
-			</div>
+			
+			
 			<div class="ft-wrap">
 				<div class="ft-cont clearfix">
-					<div class="ft-main">
+					<div class="ft-main" >
 						<ul class="ft-links">
 							<li><a href="/html/aboutus">关于我们</a></li>
 							<li><a href="/html/joinus">加入我们</a></li>
@@ -283,47 +187,12 @@
 							<li><a href="/html/cooperation">网站合作</a></li>
 							<li><a href="/html/disclaimer">免责声明</a></li>
 							<li><a href="/html/links">友情链接</a></li>
+							<li><a href="">牛客网 &copy; 2017 All Rights Reserved</a></li>
 						</ul>
-						<ul class="webrights">
-							<li><span style="color: #a9b8ca;">浙ICP备14000860号-2</span></li>
-							<li><span style="color: #a9b8ca;"> <img
-									src="//static.nowcoder.com/company/images/res/ghs.png"
-									style="width: 18px; height: 18px;"> <a
-									style="font-size: 12px;" class="ft-info-item" target="_blank"
-									href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011402010078">京公网安备
-										11011402010078号</a>
-							</span></li>
-							<li><a href="javascript:void(0);">牛客网&copy;2017 All
-									Rights Reserved</a></li>
-						</ul>
+						
 					</div>
-					<dl class="ft-web-info">
-						<dt class="ft-web-name">牛客网，程序员必备求职神器</dt>
-						<dd class="ft-info-item">QQ群：169195721</dd>
-						<dd class="ft-info-item">
-							微 信：www_nowcoder_com <a href="javascript:;"
-								class="btn btn-primary btn-xs">关注
-								<div class="tooltip top">
-									<div class="tooltip-arrow"></div>
-									<div class="tooltip-inner">
-										<img width="80"
-											src="//static.nowcoder.com//images/wx-rcode.jpg" />
-									</div>
-								</div>
-							</a>
-						</dd>
-						<dd class="ft-info-item">
-							微 博：牛客网 <a href="http://weibo.com/nowcoder"
-								class="btn btn-primary btn-xs" target="_blank">关注 </a>
-						</dd>
-					</dl>
-					<div class="ft-app">
-						<div class="ft-qrcode-box">
-							<img width="128"
-								src="//uploadfiles.nowcoder.com/app/app_download.png" />
-						</div>
-						<p>扫一扫，把题目装进口袋</p>
-					</div>
+
+
 				</div>
 			</div>
 			<div class="ad-window-sm js-global-tips" style="display: none;">
@@ -333,6 +202,7 @@
 			</div>
 
 		</div>
+  </div>
 		<script>
 			window.selected = {
 				"content" : ""
