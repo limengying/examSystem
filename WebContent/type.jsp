@@ -34,16 +34,16 @@
 				<div class="module-box home-items" >
 
 					<label> <input type="radio" id="assemble"
-						name="typeChk" value="装配"> 装配
+						name="typeChk" value="zhuangpie"> 装配
 					</label> 
 					<label> <input type="radio" id="test"
-						name="typeChk" value="测试"> 测试
+						name="typeChk" value="ceshi"> 测试
 					</label> 
 					<label> <input type="radio" id="manage"
-						name="typeChk" value="管理"> 管理
+						name="typeChk" value="guanli"> 管理
 					</label>
 					 <label> <input type="radio" id="logistics"
-						name="typeChk" value="后勤"> 后勤
+						name="typeChk" value="houqin"> 后勤
 					</label>
 
 				</div>

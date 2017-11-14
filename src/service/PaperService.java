@@ -84,7 +84,7 @@ public class PaperService {
 	 * 
 	 */
 	public int addPaper(int examineeId, String type) {
-
+		int paperId = -1;
 		for (int i = 0; i < singleChoices.size(); i++) {
 			if (i != singleChoices.size() - 1) {
 				singleChoice += singleChoices.get(i).getSingleChoiceId() + ",";
@@ -114,16 +114,19 @@ public class PaperService {
 
 		}
 
-		int paperId = paperDao.addPaper(type, examineeId, singleChoice, multiChoice, judge, singleAnswer, multiAnswer,
+		System.out.println(singleChoices);
+		System.out.println(multiChoice);
+		System.out.println(judge);
+	     paperId = paperDao.addPaper(type, examineeId, singleChoice, multiChoice, judge, singleAnswer, multiAnswer,
 				judgeAnswer);
 		if (paperId != -1) {
-			System.out.println("添加试卷成功！");
+			System.out.println(paperId);
 			paper = new Paper(type, examineeId, singleChoice, multiChoice, judge, singleAnswer, multiAnswer,
 					judgeAnswer);
 			return paperId;
 		} else {
 			System.out.println("添加试卷失败！");
-			return -1;
+			return paperId;
 		}
 	}
 
