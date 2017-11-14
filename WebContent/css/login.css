@@ -10,38 +10,6 @@ html {
 	direction: ltr
 }
 
-.input-section {
-	text-align:center;
-	width: 960px;
-	border-right: 0px solid #ededed;
-	padding-left: 25%;
-	margin-right: -1px;
-	position: relative
-}
-
-.form-group {
-	margin-bottom: 20px
-}
-
-.form-group:after, .form-group:before {
-	clear: both;
-	content: ".";
-	display: block;
-	height: 0;
-	visibility: hidden
-}
-
-.form-group .control-group {
-	float: left
-}
-
-.form-group .btn-group {
-	width: 260px;
-	margin-bottom: 20px
-}
-.pop-content .about-pwd {
-	margin: 0 0 10px 110px
-}
 
 article, aside, blockquote, body, button, code, dd, details, dl, dt,
 	fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
@@ -411,6 +379,81 @@ opacity
 :
 0
 }
+}
+.module-box {
+	border: 0px solid #e0e0e0;
+	text-align:center;
+	padding-bottom: 10px;
+	background: #fff
+}
+
+.home-items{
+	margin-top: 130px;
+}
+.module-box label{
+	width:80px;
+	font-size: 18px;
+	padding:20px;
+}
+.module-box:last-child {
+	margin: 0
+}
+
+.module-box .go-home {
+	float: right;
+	color: #c8c8c8;
+	font-size: 14px;
+	padding: 10px
+}
+
+.module-box .go-home:hover {
+	color: #25bb9b
+}
+
+.module-head {
+	padding: 15px 15px 0;
+	line-height: normal;
+	position: relative
+}
+
+.module-head-oprt {
+	float: right
+}
+
+.module-head-oprt .btn.btn-primary {
+	margin-top: -10px
+}
+.input-section {
+	text-align:center;
+	width: 960px;
+	border-right: 0px solid #ededed;
+	padding-left: 25%;
+	margin-right: -1px;
+	position: relative
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group:after, .form-group:before {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden
+}
+
+.form-group .control-group {
+	float: left
+}
+
+.form-group .btn-group {
+	width: 260px;
+	margin-bottom: 20px
+}
+.pop-content .about-pwd {
+	margin: 0 0 10px 110px
 }
 .nowcoder-header {
 	background: #3d444c;
@@ -1107,41 +1150,7 @@ opacity
 	text-align:center
 }
 
-.module-box {
-	border: 1px solid #e0e0e0;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	background: #fff
-}
 
-.module-box:last-child {
-	margin: 0
-}
-
-.module-box .go-home {
-	float: right;
-	color: #c8c8c8;
-	font-size: 14px;
-	padding: 10px
-}
-
-.module-box .go-home:hover {
-	color: #25bb9b
-}
-
-.module-head {
-	padding: 15px 15px 0;
-	line-height: normal;
-	position: relative
-}
-
-.module-head-oprt {
-	float: right
-}
-
-.module-head-oprt .btn.btn-primary {
-	margin-top: -10px
-}
 
 .mho-page {
 	color: #888;
@@ -10787,7 +10796,7 @@ pre.prettyprint {
 }
 
 .wrapper-content {
-	border-top: 1px solid #ededed;
+	border-top: 0px solid #ededed;
 	margin: 0 20px;
-	padding: 60px 70px 80px
+	padding: 100px 70px 80px
 }

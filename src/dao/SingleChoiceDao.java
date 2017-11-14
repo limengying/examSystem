@@ -46,7 +46,7 @@ public class SingleChoiceDao {
 				String option2 = rs.getString("option2");// '选项2',
 				String option3 = rs.getString("option3");// '选项3',
 				String option4 = rs.getString("option4");// '选项4',
-				String answer = rs.getString("option4");// '答案',
+				String answer = rs.getString("answer");// '答案',
 				Timestamp timestamp = rs.getTimestamp("importTime");// '导入时间',
 				Date importTime = null;
 				if (timestamp != null) {
@@ -78,4 +78,6 @@ public class SingleChoiceDao {
 		}
 		return singleChoices;
 	}
+
+	
 }

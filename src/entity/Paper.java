@@ -5,8 +5,6 @@ import java.util.Date;
 public class Paper {
 	
 	private int paperId;// int(11) NOT NULL AUTO_INCREMENT COMMENT '试卷编号',
-	
-	
 	private String type;// varchar(255) DEFAULT NULL COMMENT '所属类别',
 	private int totalScore;//  int(11) DEFAULT NULL COMMENT '试卷总分值',
 	private Date buildTime;// datetime DEFAULT NULL COMMENT '试卷生成时间',
@@ -15,9 +13,10 @@ public class Paper {
 	private String multiChoice;// varchar(255) DEFAULT NULL COMMENT '多选题',
 	private String judge;// varchar(255) DEFAULT NULL COMMENT '判断题',
 	private Date submissionTime;// datetime DEFAULT NULL COMMENT '提交时间',
-	private String singleAnswer;// varchar(255) DEFAULT NULL COMMENT '单选题提交的答案',
-	private String multiAnswer;// varchar(255) DEFAULT NULL COMMENT '多选题提交的答案',
-	private String judgeAnswer;//varchar(255) DEFAULT NULL COMMENT '判断题题提交的答案',
+	private String singleAnswer;// varchar(255) DEFAULT NULL COMMENT '单选题的答案',
+	private String multiAnswer;// varchar(255) DEFAULT NULL COMMENT '多选题的答案',
+	private String judgeAnswer;//varchar(255) DEFAULT NULL COMMENT '判断题的答案',
+	private String examineeAnswer;// varchar(255) DEFAULT NULL COMMENT '考生答案',
 	private int score;//  int(11) DEFAULT NULL COMMENT '考生得分',
 	
 	public Paper() {
@@ -26,7 +25,7 @@ public class Paper {
 	}
 	public Paper(int paperId, String type, int totalScore, Date buildTime, int examineeId, String singleChoice,
 			String multiChoice, String judge, Date submissionTime, String singleAnswer, String multiAnswer,
-			String judgeAnswer, int score) {
+			String judgeAnswer, String examineeAnswer, int score) {
 		super();
 		this.paperId = paperId;
 		this.type = type;
@@ -40,7 +39,22 @@ public class Paper {
 		this.singleAnswer = singleAnswer;
 		this.multiAnswer = multiAnswer;
 		this.judgeAnswer = judgeAnswer;
+		this.examineeAnswer = examineeAnswer;
 		this.score = score;
+	}
+	public Paper(String type,int examineeId, String singleChoice,
+			String multiChoice, String judge,String singleAnswer, String multiAnswer,
+			String judgeAnswer) {
+		super();	
+		this.type = type;		
+		this.examineeId = examineeId;
+		this.singleChoice = singleChoice;
+		this.multiChoice = multiChoice;
+		this.judge = judge;		
+		this.singleAnswer = singleAnswer;
+		this.multiAnswer = multiAnswer;
+		this.judgeAnswer = judgeAnswer;
+		
 	}
 	public int getPaperId() {
 		return paperId;
@@ -114,18 +128,26 @@ public class Paper {
 	public void setJudgeAnswer(String judgeAnswer) {
 		this.judgeAnswer = judgeAnswer;
 	}
+	
+	public String getExamineeAnswer() {
+		return examineeAnswer;
+	}
+	public void setExamineeAnswer(String examineeAnswer) {
+		this.examineeAnswer = examineeAnswer;
+	}
 	public int getScore() {
 		return score;
 	}
 	public void setScore(int score) {
 		this.score = score;
 	}
-	@Override
+    @Override
 	public String toString() {
 		return "Paper [paperId=" + paperId + ", type=" + type + ", totalScore=" + totalScore + ", buildTime="
 				+ buildTime + ", examineeId=" + examineeId + ", singleChoice=" + singleChoice + ", multiChoice="
 				+ multiChoice + ", judge=" + judge + ", submissionTime=" + submissionTime + ", singleAnswer="
-				+ singleAnswer + ", multiAnswer=" + multiAnswer + ", judgeAnswer=" + judgeAnswer + ", score=" + score
-				+ "]";
+				+ singleAnswer + ", multiAnswer=" + multiAnswer + ", judgeAnswer=" + judgeAnswer + ", examineeAnswer="
+				+ examineeAnswer + ", score=" + score + "]";
 	}
+
 }
