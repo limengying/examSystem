@@ -58,7 +58,7 @@
 										class="icon-search-colse js-close-search-btn"></a>
 								</form>
 							</div>
-						</div</li>
+						</div></li>
 					<li><a href="/app" class="icon-mobile-phone">APP</a></li>
 					<li><a href="http://hr.nowcoder.com" class="icon-briefcase"
 						target="_blank">企业版</a></li>
