@@ -9,11 +9,11 @@ import entity.SingleChoice;
 public class SingleChoiceService {
 	SingleChoiceDao singleChoiceDao = new SingleChoiceDao();
 	List<SingleChoice> singleChoices = null;
-	SingleChoice singleChoice=null;
+	SingleChoice singleChoice = null;
 	
 	/**
 	 * @param type
-	 *            选出的记录类别
+	 *            选出的试卷类别
 	 * @param num
 	 *            选出的记录条数
 	 * @return List<SingleChoice>

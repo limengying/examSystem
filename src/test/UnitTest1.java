@@ -15,7 +15,7 @@ public class UnitTest1 {
 	public void test() {
 		UserService userService=new UserService();
 		User user=userService.login(10001, "10001");
-		System.out.println(user);
+		//System.out.println(user);
 		
 	}
 	
@@ -23,7 +23,7 @@ public class UnitTest1 {
 	public void test1() {
 		ExamineeService examineeService=new ExamineeService();
 		Examinee examinee=examineeService.login(20001, "20001");
-		System.out.println(examinee);
+		//System.out.println(examinee);
 	}
 	@Test
 	public void test2() {

@@ -29,7 +29,7 @@
 					</ul>
 				</div>
 				<div class="wrapper-content clearfix" >
-					<div class="input-section" style="margin-top:50px" >
+					<div class="input-section">
 						<form>
 							<div class="form-group">
 								<label for="emailIpt" class="control-label">工号</label>

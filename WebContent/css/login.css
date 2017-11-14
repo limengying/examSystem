@@ -9,281 +9,7 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	direction: ltr
 }
-.ft-wrap {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 60px;
-	width: 100%;
-	z-index: 10;
-	background: #2A2F35
-}
 
-.ft-cont {
-	background: #2a2f35;
-	width: 960px;
-	margin: 0 auto;
-	padding: 20px 0;
-}
-
-.ft-main {
-	float: left;
-	border-left: 0px solid #646f7c;
-	width: 960px;
-	margin: 0px 0 0;
-	padding: 0px 0 0 70px;
-}
-
-.ft-links {
-	margin-left:60px;
-	margin-bottom: 0px;
-}
-
-.ft-links li {
-	display: inline-block;
-	*zoom: 1;
-	*display: inline;
-	margin: 0 15px 5px 0
-}
-
-.ft-links a {
-	color: #a9b8ca
-}
-
-.wrapper {
-	 width: 960px;
-	 position: relative;
-	
-	border: 1px solid #d6d6d6;
-	border-radius: 4px;
-	background: #fff;
-	overflow: hidden
-	
-		
-}
-.tabbed{
-	padding-bottom:30px;
-}
-.tabbed li {
-	float: left;
-	background: #f3f4f5;
-	border-bottom: 2px solid #f3f4f5;
-	width: 100%;
-	text-align: center;
-	height: 83px;
-	line-height: 83px
-	
-}
-
-.tabbed li.tab-selected {
-	background: #FFF;
-	border-top: 2px solid #25bb9b
-}
-
-.tabbed a {
-	color: #666;
-	font-size: 24px;
-	display: block
-}
-
-.tab-selected a, .tabbed a:hover {
-	text-decoration: none;
-	color: #25bb9b
-}
-
-.tab-login, .tab-reg {
-	background: url(//static.nowcoder.com/images/img/icons/reg-login.png)
-		no-repeat;
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	vertical-align: text-bottom;
-	margin-right: 15px
-	
-}
-
-.tab-reg {
-	background-position: 0 -58px
-}
-
-.tab-selected .tab-login, a:hover .tab-login {
-	background-position: 0 -174px
-}
-
-.tab-selected .tab-reg, a:hover .tab-reg {
-	background-position: 0 -116px
-}
-.wrapper-content {
-	border-top: 1px solid #ededed;
-	margin: 0 20px;
-	padding: 60px 70px 80px
-}
-.clearfix {
-	display: block;
-	zoom: 1
-	
-}
-.input-section {
-	
-	text-align:center;
-	width: 960px;
-	
-	margin-left: 20%;
-	margin-right: -1px;
-	position: relative
-}
-
-.form-group {
-	margin-bottom: 20px
-}
-
-.form-group:after, .form-group:before {
-	clear: both;
-	content: ".";
-	display: block;
-	height: 0;
-	visibility: hidden
-}
-
-.form-group .control-group {
-	float: left
-}
-
-.form-group .btn-group {
-	width: 260px;
-	margin-bottom: 20px
-}
-.pop-content .about-pwd {
-	margin: 0 0 10px 110px
-}
-
-.keep-pwd {
-	margin-left: 14%;
-	float: left
-}
-
-.keep-type {
-	margin-left: 10%;
-	float: left
-}
-
-.keep-type label {
-	margin-left: 10%;
-	float: left
-	display: block;
-	
-}
-
-.keep-pwd label {
-	font-size: 18px;
-	margin: 0;
-	color: #999
-}
-
-.keep-pwd input {
-	width: auto
-}
-
-.forget-pwd {
-	float: right;
-	color: #67cab2 !important;
-	font-size: 14px
-}
-
-.module-box {
-	border: 0px solid #e0e0e0;
-	
-	margin-bottom: 0px;
-	background: #fff
-}
-
-.home-items {
-	text-align: center;
-	padding: 30px 0
-
-}
-.home-items a {
-	display: inline-block;
-	margin: 0 22px
-}
-
-.home-items i {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	background: url(//static.nowcoder.com/images/img/home/iconItems3.png)no-repeat
-}
-
-.real-exercise i {
-	background-position: 0 0
-}
-
-.real-exercise:hover i {
-	background-position: 0 -364px
-}
-
-.real-exercise:hover {
-	color: #f77a57
-}
-
-.devote-exercise i {
-	background-position: 0 -60px
-}
-
-.devote-exercise:hover i {
-	background-position: 0 -424px
-}
-
-.devote-exercise:hover {
-	color: #f8bc1b
-}
-
-.wrong-exercise i {
-	background-position: 0 -121px
-}
-
-.wrong-exercise:hover i {
-	background-position: 0 -484px
-}
-
-.wrong-exercise:hover {
-	color: #a3c966
-}
-
-.subject-exercise i {
-	background-position: 0 -182px
-}
-
-.subject-exercise:hover i {
-	background-position: 0 -540px
-}
-
-.subject-exercise:hover {
-	color: #79b4d2
-}
-
-.check-discuss i {
-	background-position: 0 -243px
-}
-
-.check-discuss:hover i {
-	background-position: 0 -595px
-}
-
-.check-discuss:hover {
-	color: #b690cf
-}
-.items-collect i {
-	background-position: 0 -304px
-}
-
-.items-collect:hover i {
-	background-position: 0 -651px
-}
-
-.items-collect:hover {
-	color: #c87598
-}
 
 article, aside, blockquote, body, button, code, dd, details, dl, dt,
 	fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6,
@@ -653,6 +379,81 @@ opacity
 :
 0
 }
+}
+.module-box {
+	border: 0px solid #e0e0e0;
+	text-align:center;
+	padding-bottom: 10px;
+	background: #fff
+}
+
+.home-items{
+	margin-top: 130px;
+}
+.module-box label{
+	width:80px;
+	font-size: 18px;
+	padding:20px;
+}
+.module-box:last-child {
+	margin: 0
+}
+
+.module-box .go-home {
+	float: right;
+	color: #c8c8c8;
+	font-size: 14px;
+	padding: 10px
+}
+
+.module-box .go-home:hover {
+	color: #25bb9b
+}
+
+.module-head {
+	padding: 15px 15px 0;
+	line-height: normal;
+	position: relative
+}
+
+.module-head-oprt {
+	float: right
+}
+
+.module-head-oprt .btn.btn-primary {
+	margin-top: -10px
+}
+.input-section {
+	text-align:center;
+	width: 960px;
+	border-right: 0px solid #ededed;
+	padding-left: 25%;
+	margin-right: -1px;
+	position: relative
+}
+
+.form-group {
+	margin-bottom: 20px
+}
+
+.form-group:after, .form-group:before {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden
+}
+
+.form-group .control-group {
+	float: left
+}
+
+.form-group .btn-group {
+	width: 260px;
+	margin-bottom: 20px
+}
+.pop-content .about-pwd {
+	margin: 0 0 10px 110px
 }
 .nowcoder-header {
 	background: #3d444c;
@@ -1033,6 +834,46 @@ opacity
 	padding: 0 20px 0 3px
 }
 
+.ft-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	z-index: 10;
+	background: #2A2F35
+}
+
+.ft-cont {
+	background: #2a2f35;
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.ft-main {
+	float: left;
+	border-left: 0px solid #646f7c;
+	width: 960px;
+	margin: 0px 0 0;
+	padding: 0px 0 0 70px;
+}
+
+.ft-links {
+	margin-left:60px;
+	margin-bottom: 0px;
+}
+
+.ft-links li {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	margin: 0 15px 5px 0
+}
+
+.ft-links a {
+	color: #a9b8ca
+}
 
 .webrights li {
 	margin-bottom: 5px
@@ -1310,34 +1151,6 @@ opacity
 }
 
 
-.module-box:last-child {
-	margin: 0
-}
-
-.module-box .go-home {
-	float: right;
-	color: #c8c8c8;
-	font-size: 14px;
-	padding: 10px
-}
-
-.module-box .go-home:hover {
-	color: #25bb9b
-}
-
-.module-head {
-	padding: 15px 15px 0;
-	line-height: normal;
-	position: relative
-}
-
-.module-head-oprt {
-	float: right
-}
-
-.module-head-oprt .btn.btn-primary {
-	margin-top: -10px
-}
 
 .mho-page {
 	color: #888;
@@ -8781,6 +8594,26 @@ input.input-time {
 }
 
 
+.keep-pwd {
+	margin-left: 13%;
+	float: left
+}
+
+.keep-pwd label {
+	font-size: 14px;
+	margin: 0;
+	color: #999
+}
+
+.keep-pwd input {
+	width: auto
+}
+
+.forget-pwd {
+	float: right;
+	color: #67cab2 !important;
+	font-size: 14px
+}
 
 .rq-img {
 	width: 80px;
@@ -10340,7 +10173,10 @@ a:hover {
 
 
 
-
+.clearfix {
+	display: block;
+	zoom: 1
+}
 
 .txt-left {
 	text-align: left !important
@@ -10895,7 +10731,72 @@ pre.prettyprint {
 	vertical-align: text-top
 }
 
+.wrapper {
+	 position: absolute;
+	 top: 50%;
+     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	border: 1px solid #d6d6d6;
+	border-radius: 4px;
+	background: #fff;
+	overflow: hidden
+	
+}
 
+.tabbed li {
+	float: left;
+	background: #f3f4f5;
+	border-top: 2px solid #f3f4f5;
+	width: 100%;
+	text-align: center;
+	height: 83px;
+	line-height: 83px
+}
 
+.tabbed li.tab-selected {
+	background: #FFF;
+	border-top: 2px solid #25bb9b
+}
 
+.tabbed a {
+	color: #666;
+	font-size: 24px;
+	display: block
+}
 
+.tab-selected a, .tabbed a:hover {
+	text-decoration: none;
+	color: #25bb9b
+}
+
+.tab-login, .tab-reg {
+	background: url(//static.nowcoder.com/images/img/icons/reg-login.png)
+		no-repeat;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	vertical-align: text-bottom;
+	margin-right: 15px
+}
+
+.tab-reg {
+	background-position: 0 -58px
+}
+
+.tab-selected .tab-login, a:hover .tab-login {
+	background-position: 0 -174px
+}
+
+.tab-selected .tab-reg, a:hover .tab-reg {
+	background-position: 0 -116px
+}
+
+.wrapper-content {
+	border-top: 0px solid #ededed;
+	margin: 0 20px;
+	padding: 100px 70px 80px
+}

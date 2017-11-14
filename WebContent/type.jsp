@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XX文化考试系统</title>
+<title>XX文化考试系统-类型选择</title>
 
 <link rel="stylesheet"
 	href="<%=request.getContextPath()%>/css/login.css">
 <script src="<%=request.getContextPath()%>/js/common/api.js"></script>
 <script src="<%=request.getContextPath()%>/js/common/common.js"></script>
-<script src="<%=request.getContextPath()%>/js/login/login.js"></script>
+<script src="<%=request.getContextPath()%>/js/exam/type.js"></script>
 </head>
 <body>
 	<div class="nk-container    ">
@@ -28,30 +28,24 @@
 				<div class="tabbed">
 					<ul class="clearfix">
 						<li class="tab-selected"><a href="javascript:void(0);"><span
-								class="tab-login"></span>请选择一种类别</a></li>
+								class="tab-login"></span>请选择一种类别进行考试！</a></li>
 					</ul>
 				</div>
-				<div class="module-box home-items" style="margin-top: 100px">
-					<a class="subject-exercise" href="/contestRoom"> <i></i></a> 
-					<label> <input type="radio" id="userLoginChk"
-								name="loginChk" value="userLogin"> 装配
-					</label>
-				    <a class="real-exercise" href="/intelligentTest"> <i></i></a> 
-					<label>
-						<input type="radio" id="examineeLoginChk" name="loginChk"
-						value="examineeLogin"> 测试
+				<div class="module-box home-items" >
+
+					<label> <input type="radio" id="assemble"
+						name="typeChk" value="装配"> 装配
 					</label> 
-					
-				    <label>
-						<input type="radio" id="userLoginChk" name="loginChk"
-						value="userLogin"> 管理
-					</label> <a class="wrong-exercise" href="/profile/1118903/wrongset"> <i></i>
-					</a> 
-					<label> <input type="radio" id="examineeLoginChk"
-								name="loginChk" value="examineeLogin"> 后勤
-							</label><a class="devote-exercise" href="/activity/oj"> <i></i></a>
-				
-						
+					<label> <input type="radio" id="test"
+						name="typeChk" value="测试"> 测试
+					</label> 
+					<label> <input type="radio" id="manage"
+						name="typeChk" value="管理"> 管理
+					</label>
+					 <label> <input type="radio" id="logistics"
+						name="typeChk" value="后勤"> 后勤
+					</label>
+
 				</div>
 
 				<div class="wrapper-content clearfix">
@@ -61,7 +55,7 @@
 							<div class="form-group">
 								<div class="col-input-login">
 									<a class="btn btn-primary btn-block"
-										onclick="javascript:login();" id="loginBtn">开始考试</a> <input
+										onclick="javascript:examine();" id="examBtn">开始考试</a> <input
 										type="submit" class="nk-invisible" />
 								</div>
 							</div>
@@ -96,13 +90,7 @@
 		</div>
 
 	</div>
-	<script>
-		window.isLogin = false;
-		window.globalInfo = {
-			canLoadInIframe : 'false'
-		};
-		window.useNeteaseCaptcha = true;
-	</script>
+
 
 </body>
 </html>
