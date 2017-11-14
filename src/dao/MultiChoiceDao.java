@@ -31,7 +31,7 @@ public class MultiChoiceDao {
 	 */
 	public List<MultiChoice> getMultiChoicesInRandom(String type, int num) {
 		multiChoices = new ArrayList<MultiChoice>();
-		String sql = "SELECT * FROM multichoicequestion WHERE type = ? ORDER BY rand() LIMIT ?";
+		String sql = "SELECT * FROM multiplechoicequestion WHERE type = ? ORDER BY rand() LIMIT ?";
 		try {
 			conn = util.openConnection();
 			preparedStatement = conn.prepareStatement(sql);

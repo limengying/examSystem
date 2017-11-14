@@ -26,7 +26,7 @@ public class PaperDao {
 	public int addPaper(String type, int examineeId, String singleChoice, String multiChoice, String judge, String singleAnswer, String multiAnswer,String judgeAnswer) {
 		paper = new Paper();
 		int paperId = -1;
-		String sql = "INSERT INTO paperinfo (type, examineeId, singleChoice,singleChoice, judge, singleAnswer, multiAnswer,judgeAnswer,buildTime) VALUES (?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO paperinfo (type, examineeId, singleChoice,multiChoice, judge, singleAnswer, multiAnswer,judgeAnswer,buildTime) VALUES (?,?,?,?,?,?,?,?,?)";
 		try {
 
 			conn = util.openConnection();
@@ -34,7 +34,7 @@ public class PaperDao {
 			preparedStatement.setString(1, type);
 			preparedStatement.setInt(2, examineeId);
 			preparedStatement.setString(3, singleChoice);
-			preparedStatement.setString(4, singleChoice);
+			preparedStatement.setString(4, multiChoice);
 			preparedStatement.setString(5, judge);
 			preparedStatement.setString(6, singleAnswer);
 			preparedStatement.setString(7, multiAnswer);
@@ -48,6 +48,7 @@ public class PaperDao {
 			int i = preparedStatement.executeUpdate();
 			if (i == 1) {
 				System.out.println(sql);
+				System.out.println("插入试卷成功！");
 				paperId = getPaperByTime(examineeId,type,buildTime);
 				System.out.println(paperId);
 				return paperId;
@@ -89,6 +90,7 @@ public class PaperDao {
 			rs = preparedStatement.executeQuery();
 			while (rs.next()) {
 				paperId = rs.getInt("paperId");
+				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -57,20 +57,23 @@ public class PaperServlet extends HttpServlet {
 		Map<String, Object> map = new HashMap<String, Object>();
 
 		System.out.println("-----------------TypeO.jsp----------");
+		
 		PaperService paperService = new PaperService();
 		List<SingleChoice> singleChoices = null;
 		List<MultiChoice> multiChoices = null;
 		List<Judge> judges = null;
 		Examinee examinee = null;
 		
-		if (request.getParameter("opyType") != null) {
-			String type = request.getParameter("opyType");
-			System.out.print(type);
+		
+		if (request.getParameter("optType") != null) {
+			String type = request.getParameter("optType");
+
 			if (paperService.generateQuestions(type) == true) {
 				
 				singleChoices = paperService.getSingleChoices();
 				multiChoices = paperService.getMultiChoices();
 				judges = paperService.getJudges();
+				
 				if (session.getAttribute("examinee") == null) {
 					map.put("reslut", "-1");
 				} 
@@ -95,11 +98,11 @@ public class PaperServlet extends HttpServlet {
 		}
 
 	 
-
+		System.out.println("map..." + map);
 		// 根据result值，判断页面如何跳转
 		if ("0".equals(map.get("result"))) {// 试卷生成成功，跳转考试页面
 			System.out.println("页面操作正确");
-			writer.println("<script language='javascript'>window.location.href='./paper.jsp'</script>");
+			writer.println("<script language='javascript'>alert('saaaaaaaaaaa');window.location.href='./paper.jsp'</script>");
 
 		} else if ("-1".equals(map.get("result"))) {// session不存在考生
 			writer.println(
