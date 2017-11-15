@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XX文化考试系统</title>
+<title>XX文化考试系统-登录</title>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login.css">
 <script src="<%=request.getContextPath()%>/js/common/api.js"></script>
 <script src="<%=request.getContextPath()%>/js/common/common.js"></script>
@@ -20,15 +20,15 @@
 				</ul>		
 			</div>
 		</div>
-		<div class="nk-main clearfix">
-			<div class="wrapper">
-				<div class="tabbed">
+		<div class="nk-main clearfix" >
+			<div class="wrapper" >
+				<div class="tabbed" >
 					<ul class="clearfix">
-						<li class="tab-selected"><a href="javascript:void(0);"><span
+						<li class="tab-selected" ><a href="javascript:void(0);"><span
 								class="tab-login"></span>登录</a></li>	
 					</ul>
 				</div>
-				<div class="wrapper-content clearfix">
+				<div class="wrapper-content clearfix" >
 					<div class="input-section">
 						<form>
 							<div class="form-group">
@@ -87,11 +87,7 @@
 			
 			</div>
 		</div>
-		<div class="ad-window-sm js-global-tips" style="display: none;">
-			<a href="javascript:void(0);" class="ad-close">X</a>
-			<div class="ad-live-active"></div>
-			<a class="link-green js-global-tips-href" target="_blank" href="">点击查看>></a>
-		</div>
+		
 
 	</div>
 	<script>
