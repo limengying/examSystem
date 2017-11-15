@@ -87,11 +87,7 @@
 			
 			</div>
 		</div>
-		<div class="ad-window-sm js-global-tips" style="display: none;">
-			<a href="javascript:void(0);" class="ad-close">X</a>
-			<div class="ad-live-active"></div>
-			<a class="link-green js-global-tips-href" target="_blank" href="">点击查看>></a>
-		</div>
+		
 
 	</div>
 	<script>

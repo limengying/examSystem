@@ -377,6 +377,49 @@ opacity
 0
 }
 }
+.ft-wrap {
+	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	z-index: 10;
+	background: #2A2F35
+}
+
+.ft-cont {
+	
+		background: #2a2f35;
+	width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.ft-main {
+	
+	float: left;
+	border-left: 0px solid #646f7c;
+	width: 960px;
+	margin: 0px 0 0;
+	padding: 0px 0 0 70px;
+}
+
+.ft-links {
+	margin-left:60px;
+	margin-bottom: 0px;
+}
+
+.ft-links li {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	margin: 0 15px 0px 0
+}
+
+.ft-links a {
+	color: #a9b8ca
+}
 .nowcoder-header {
 	background: #3d444c;
 	position: fixed;
@@ -387,6 +430,7 @@ opacity
 }
 
 .header-main {
+	padding-left:45%;
 	width: 960px;
 	margin: 0 auto
 }
@@ -756,45 +800,7 @@ opacity
 	padding: 0 20px 0 3px
 }
 
-.ft-wrap {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 225px;
-	width: 100%;
-	z-index: 10;
-	background: #2A2F35
-}
 
-.ft-cont {
-	background: #2a2f35;
-	width: 960px;
-	margin: 0 auto;
-	padding: 20px 0
-}
-
-.ft-main {
-	float: right;
-	border-left: 0px solid #646f7c;
-	width: 100%;
-	margin: 20px 0 0;
-	padding: 10px 0 0 30px
-}
-
-.ft-links {
-	margin-bottom: 5px
-}
-
-.ft-links li {
-	display: inline-block;
-	*zoom: 1;
-	*display: inline;
-	margin: 0 15px 5px 0
-}
-
-.ft-links a {
-	color: #a9b8ca
-}
 
 .webrights li {
 	margin-bottom: 5px
@@ -1056,7 +1062,7 @@ opacity
 	margin: 0 auto;
 	width: 960px;
 	padding-top: 70px;
-	padding-bottom: 250px
+	padding-bottom: 80px
 }
 
 .nk-content {
@@ -11456,7 +11462,7 @@ pre.prettyprint {
 	background: url(//static.nowcoder.com/images/img/fold-ico.png) right 6px
 		no-repeat;
 	color: #dce4ec !important;
-	display: none
+	
 }
 
 .open .card-fold {
@@ -11471,7 +11477,7 @@ pre.prettyprint {
 
 .answer-sheet-num {
 	margin-top: 15px;
-	display: none
+	
 }
 
 .answer-sheet-num li {
@@ -11601,7 +11607,7 @@ pre.prettyprint {
 	.full-screen-body .nk-footer, .full-screen-body .nowcoder-header,
 	.full-screen-body .subject-progress, .full-screen-subject .decorate-foot
 	{
-	display: none
+	display: block;
 }
 
 .full-screen-subject .subject-box {
