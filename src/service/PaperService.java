@@ -60,7 +60,7 @@ public class PaperService {
 	 */
 	public boolean generateQuestions(String type) {
 
-		singleChoices = singleDao.getSingleChoicesInRandom(type, 1);
+		singleChoices = singleDao.getSingleChoicesInRandom(type, 4);
 		multiChoices = multiDao.getMultiChoicesInRandom(type, 1);
 		judges = judgeDao.getJudgesInRandom(type, 1);
 		if (singleChoices != null && multiChoices != null && judges != null) {

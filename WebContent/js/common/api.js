@@ -6,3 +6,4 @@ const IPCONFIG='http://127.0.0.1:8080/examSystem/';//全局iP地址url 本地
 const LOGIN_API=IPCONFIG+'LoginServlet';// login api url
 const Paper_API=IPCONFIG+'PaperServlet';// paper api url
 
+
